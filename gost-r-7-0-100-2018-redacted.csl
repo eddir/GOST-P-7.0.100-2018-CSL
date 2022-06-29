@@ -533,9 +533,13 @@
   </macro>
   <bibliography et-al-min="4" et-al-use-first="1" page-range-format="">
     <sort>
-      <key macro="language-sort" sort="descending"/>
-      <key macro="author-title"/>
-      <key variable="issued"/>
+      <!-- Строка для сортировки в порядке появления ссылок, а не в алфавитном. Чтобы задействовать сортировку
+      по автору, нужно ее закомментировать, а следующие три разкомментировать -->
+      <key variable="citation-number"/>
+      <!-- Сортировка по полю "Language" (сначала русскоязычные источники, затем иностранные) -->
+<!--       <key macro="language-sort"/>  -->
+<!--       <key macro="author-title"/> -->
+<!--       <key variable="issued"/> -->
     </sort>
     <layout locale="en" suffix=".">
       <text macro="bibliography"/>
